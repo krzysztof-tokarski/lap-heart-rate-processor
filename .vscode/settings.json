@@ -1,6 +1,6 @@
 {
-  "workbench.colorCustomizations": {
-    "statusBar.noFolderBackground": "#212121"
-  },
+	"workbench.colorCustomizations": {
+		"statusBar.noFolderBackground": "#212121"
+	},
   "editor.formatOnSave": true
 }
