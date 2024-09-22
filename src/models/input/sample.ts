@@ -1,4 +1,4 @@
-export interface Sample {
+export interface SampleInput {
   'recording-rate': number;
   'sample-type': string;
   data: string;

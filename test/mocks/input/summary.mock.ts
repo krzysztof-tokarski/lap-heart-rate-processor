@@ -1,4 +1,4 @@
-import { Summary } from '@/models/index';
+import { SummaryInput } from '@/models/index';
 
 export const SUMMARY = {
   userId: '1234567890',
@@ -12,4 +12,4 @@ export const SUMMARY = {
   activeKilocalories: 561,
   deviceName: 'instinct2',
   maxHeartRateInBeatsPerMinute: 190,
-} satisfies Summary;
+} satisfies SummaryInput;

@@ -1,4 +1,4 @@
-import { Lap } from '@/models/index';
+import { LapInput } from '@/models/index';
 
 export const LAPS = [
   {
@@ -15,4 +15,4 @@ export const LAPS = [
     totalDistanceInMeters: 30,
     timerDurationInSeconds: 900,
   },
-] satisfies Lap[];
+] satisfies LapInput[];

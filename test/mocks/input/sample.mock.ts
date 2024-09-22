@@ -1,4 +1,4 @@
-import { Sample } from '@/models/index';
+import { SampleInput } from '@/models/index';
 
 export const SAMPLES = [
   {
@@ -47,4 +47,4 @@ export const SAMPLES = [
     'sample-type': '3',
     data: '143,87,88,88,88,90,91',
   },
-] satisfies Sample[];
+] satisfies SampleInput[];

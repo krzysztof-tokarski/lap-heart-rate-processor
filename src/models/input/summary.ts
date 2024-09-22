@@ -1,4 +1,4 @@
-export interface Summary {
+export interface SummaryInput {
   userId: string;
   activityId: number;
   activityName: string;
