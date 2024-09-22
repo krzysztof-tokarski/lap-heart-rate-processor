@@ -1,5 +1,5 @@
 {
-  "name": "lap-heart-rate-analyser",
+  "name": "lap-heart-rate-processor",
   "version": "1.0.0",
   "description": "A library for processing sports computer data",
   "main": "dist/index.js",
@@ -28,4 +28,3 @@
     "vitest": "^0.29.8"
   }
 }
-

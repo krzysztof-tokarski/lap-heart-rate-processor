@@ -8,7 +8,7 @@ import {
 /**
  * @todo: consider name change as well as project name change
  */
-export class LapHeartRateAnalyser {
+export class LapHeartRateProcessor {
   private _summary!: SummaryInput;
   private _laps!: LapInput[];
   private _samples!: SampleInput[];
