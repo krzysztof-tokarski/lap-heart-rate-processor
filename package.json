@@ -1,0 +1,30 @@
+{
+  "name": "lap-heart-rate-analyser",
+  "version": "1.0.0",
+  "description": "A library for processing sports computer data",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm run build:dist && node dist/main.js",
+    "build:dist": "tsc --outDir dist",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.0",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitest/coverage-c8": "^0.29.8",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "globals": "^15.9.0",
+    "prettier": "^2.8.7",
+    "typescript": "^5.0.3",
+    "typescript-eslint": "^8.6.0",
+    "vitest": "^0.29.8"
+  }
+}
