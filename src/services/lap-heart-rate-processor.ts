@@ -1,35 +1,28 @@
-import { Input, Intermediate, Output } from '@/models/index';
+import { InputMappers } from '@/mappers';
+import { InputModels, IntermediateModels, OutputModels } from '@/models';
+import { InputValidatorService } from './input-validator';
 
 export class LapHeartRateProcessor {
-  private _summary!: Intermediate.Summary;
-  private _laps!: Intermediate.Lap[];
-  private _samples!: Intermediate.Sample[];
+  private _summary!: IntermediateModels.Summary;
+  private _laps!: IntermediateModels.Lap[];
+  private _samples!: IntermediateModels.Sample[];
 
-  /**
-   *
-   * @todo: add validation
-   */
-  public loadSummary(data: Input.Summary): void {
+  public loadSummary(data: InputModels.Summary): void {
+    InputValidatorService.validateSummary(data);
     this._summary = data;
   }
 
-  /**
-   *
-   * @todo: add validation
-   */
-  public loadLaps(data: Input.Lap[]): void {
+  public loadLaps(data: InputModels.Lap[]): void {
+    InputValidatorService.validateLaps(data);
     this._laps = data;
   }
 
-  /**
-   *
-   * @todo: add validation
-   */
-  public loadSamples(data: Input.Sample[]): void {
-    this._samples = data;
+  public loadSamples(data: InputModels.Sample[]): void {
+    InputValidatorService.validateSamples(data);
+    this._samples = InputMappers.mapSamplesInputToIntermediate(data);
   }
 
-  public process(): Output.ActivityOverview {
+  public process(): OutputModels.ActivityOverview {
     throw new Error('Not implemented');
   }
 }

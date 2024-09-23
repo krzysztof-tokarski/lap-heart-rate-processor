@@ -14,20 +14,22 @@ import ActivityOverviewOutput from './output/activity-overview';
 import HeartRateSampleOutput from './output/heart-rate-sample';
 import LapOutput from './output/lap';
 
-export namespace Input {
-  export type Lap = LapInput;
-  export type Sample = SampleInput;
-  export type Summary = SummaryInput;
+import type { ReadonlyDeep } from 'type-fest';
+
+export namespace InputModels {
+  export type Lap = ReadonlyDeep<LapInput>;
+  export type Sample = ReadonlyDeep<SampleInput>;
+  export type Summary = ReadonlyDeep<SummaryInput>;
 }
 
-export namespace Intermediate {
-  export type Lap = LapIntermediate;
-  export type Sample = SampleIntermediate;
-  export type Summary = SummaryIntermediate;
+export namespace IntermediateModels {
+  export type Lap = ReadonlyDeep<LapIntermediate>;
+  export type Sample = ReadonlyDeep<SampleIntermediate>;
+  export type Summary = ReadonlyDeep<SummaryIntermediate>;
 }
 
-export namespace Output {
-  export type ActivityOverview = ActivityOverviewOutput;
-  export type HeartRateSample = HeartRateSampleOutput;
-  export type Lap = LapOutput;
+export namespace OutputModels {
+  export type ActivityOverview = ReadonlyDeep<ActivityOverviewOutput>;
+  export type HeartRateSample = ReadonlyDeep<HeartRateSampleOutput>;
+  export type Lap = ReadonlyDeep<LapOutput>;
 }
