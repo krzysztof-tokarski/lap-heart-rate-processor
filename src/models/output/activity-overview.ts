@@ -1,6 +1,6 @@
-import { Lap } from './lap';
+import Lap from './lap';
 
-export interface ActivityOverview {
+export default interface ActivityOverview {
   userId: string;
   type: string;
   device: string;

@@ -1,6 +1,6 @@
-import { HeartRateSample } from './heart-rate-sample';
+import HeartRateSample from './heart-rate-sample';
 
-export interface Lap {
+export default interface Lap {
   startTime: Date;
   distance: number;
   duration: number;

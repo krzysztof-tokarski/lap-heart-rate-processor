@@ -1,23 +1,15 @@
-import {
-  ActivityOverview,
-  LapInput,
-  SampleInput,
-  SummaryInput,
-} from '@/models/index';
+import { Input, Intermediate, Output } from '@/models/index';
 
-/**
- * @todo: consider name change as well as project name change
- */
 export class LapHeartRateProcessor {
-  private _summary!: SummaryInput;
-  private _laps!: LapInput[];
-  private _samples!: SampleInput[];
+  private _summary!: Intermediate.Summary;
+  private _laps!: Intermediate.Lap[];
+  private _samples!: Intermediate.Sample[];
 
   /**
    *
    * @todo: add validation
    */
-  public loadSummary(data: SummaryInput): void {
+  public loadSummary(data: Input.Summary): void {
     this._summary = data;
   }
 
@@ -25,7 +17,7 @@ export class LapHeartRateProcessor {
    *
    * @todo: add validation
    */
-  public loadLaps(data: LapInput[]): void {
+  public loadLaps(data: Input.Lap[]): void {
     this._laps = data;
   }
 
@@ -33,11 +25,11 @@ export class LapHeartRateProcessor {
    *
    * @todo: add validation
    */
-  public loadSamples(data: SampleInput[]): void {
+  public loadSamples(data: Input.Sample[]): void {
     this._samples = data;
   }
 
-  public process(): ActivityOverview {
+  public process(): Output.ActivityOverview {
     throw new Error('Not implemented');
   }
 }
