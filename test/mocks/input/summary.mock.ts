@@ -1,6 +1,6 @@
-import { SummaryInput } from '@/models/index';
+import { InputModels } from '@/models';
 
-export const SUMMARY = {
+export const SUMMARY_MOCK = {
   userId: '1234567890',
   activityId: 9480958402,
   activityName: 'Indoor Cycling',
@@ -12,4 +12,4 @@ export const SUMMARY = {
   activeKilocalories: 561,
   deviceName: 'instinct2',
   maxHeartRateInBeatsPerMinute: 190,
-} satisfies SummaryInput;
+} satisfies InputModels.Summary;

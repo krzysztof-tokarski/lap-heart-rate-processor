@@ -1,0 +1,11 @@
+import { INDOOR_CYCLING_ACTIVITY_TYPE_IDENTIFIER } from './lap';
+import { HEART_RATE_SAMPLE_IDENTIFIER } from './sample';
+
+export const CONSTANTS = {
+  LAP: {
+    INDOOR_CYCLING_ACTIVITY_TYPE_IDENTIFIER,
+  },
+  SAMPLE: {
+    HEART_RATE_SAMPLE_IDENTIFIER
+  }
+}

@@ -1,6 +1,6 @@
-import { SampleInput } from '@/models/index';
+import { InputModels } from '@/models';
 
-export const SAMPLES = [
+export const SAMPLES_MOCK = [
   {
     'recording-rate': 5,
     'sample-type': '0',
@@ -47,4 +47,4 @@ export const SAMPLES = [
     'sample-type': '3',
     data: '143,87,88,88,88,90,91',
   },
-] satisfies SampleInput[];
+] satisfies InputModels.Sample[];

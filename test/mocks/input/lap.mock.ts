@@ -1,6 +1,6 @@
-import { LapInput } from '@/models/index';
+import { InputModels } from '@/models';
 
-export const LAPS = [
+export const LAPS_MOCK = [
   {
     startTimeInSeconds: 1661158927,
     airTemperatureCelsius: 28,
@@ -15,4 +15,4 @@ export const LAPS = [
     totalDistanceInMeters: 30,
     timerDurationInSeconds: 900,
   },
-] satisfies LapInput[];
+] satisfies InputModels.Lap[];

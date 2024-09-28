@@ -2,9 +2,9 @@ import Lap from './lap';
 
 export default interface ActivityOverview {
   userId: string;
-  type: string;
+  activityType: string;
   device: string;
-  maxHeartRate: number;
-  duration: number;
+  maxHeartRateInBeatsPerMinute: number;
+  durationInSeconds: number;
   laps: Lap[];
 }

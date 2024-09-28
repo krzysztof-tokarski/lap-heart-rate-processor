@@ -1,8 +1,8 @@
 import HeartRateSample from './heart-rate-sample';
 
 export default interface Lap {
-  startTime: Date;
-  distance: number;
-  duration: number;
+  startTimeInSeconds: number;
+  totalDistanceInMeters: number;
+  timerDurationInSeconds: number;
   heartRateSamples: HeartRateSample[];
 }

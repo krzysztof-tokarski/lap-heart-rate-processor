@@ -4,8 +4,8 @@ import { InputModels } from '@/models';
 export default function isValidSample(obj: any): obj is InputModels.Sample {
   return (
     !!obj &&
-    typeof obj.recordingRate === 'number' &&
-    typeof obj.sampleType === 'string' &&
+    typeof obj['recording-rate'] === 'number' &&
+    typeof obj['sample-type'] === 'string' &&
     typeof obj.data === 'string'
   );
 }

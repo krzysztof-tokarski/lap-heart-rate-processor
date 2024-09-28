@@ -11,7 +11,13 @@ function mapInputToIntermediate(
 ): IntermediateModels.Sample {
   return {
     recordingRate: sample['recording-rate'],
-    sampleType: sample['sample-type'],
+    sampleType: getSampleType(sample),
     data: sample.data,
   };
+}
+
+type SampleType = IntermediateModels.Sample['sampleType'];
+
+function getSampleType(sample: InputModels.Sample): SampleType {
+  return Number(sample['sample-type']) as SampleType;
 }
