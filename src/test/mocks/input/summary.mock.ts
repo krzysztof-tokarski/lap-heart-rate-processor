@@ -1,4 +1,4 @@
-import { InputModels } from '@/models';
+import { InputModels } from '../../../models';
 
 export const SUMMARY_MOCK = {
   userId: '1234567890',

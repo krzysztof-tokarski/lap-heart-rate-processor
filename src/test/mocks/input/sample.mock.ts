@@ -1,4 +1,4 @@
-import { InputModels } from '@/models';
+import { InputModels } from '../../../models';
 
 export const SAMPLES_MOCK = [
   {
