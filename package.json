@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "start": "npm run build:dist && node dist/main.js",
-    "build:dist": "tsc && tsc-alias",
+    "build:dist": "tsc -p tsconfig.release.json && tsc-alias -p tsconfig.release.json",
     "package": "npm run build:dist && npm pack",
     "test": "vitest",
     "coverage": "vitest run --coverage",
