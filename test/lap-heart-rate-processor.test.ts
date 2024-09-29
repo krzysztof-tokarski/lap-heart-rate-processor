@@ -1,5 +1,5 @@
+import { LapHeartRateProcessor } from 'src/lap-heart-rate-processor';
 import { describe, expect, it } from 'vitest';
-import { LapHeartRateProcessor } from '../src/lap-heart-rate-processor';
 import { LAPS_MOCK } from './mocks/input/lap.mock';
 import { SAMPLES_MOCK } from './mocks/input/sample.mock';
 import { SUMMARY_MOCK } from './mocks/input/summary.mock';
