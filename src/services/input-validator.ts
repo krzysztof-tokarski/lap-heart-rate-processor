@@ -1,5 +1,5 @@
-import { InputValidators } from './../validators/index';
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { InputValidators } from '@/validators';
 
 export class InputValidatorService {
   public static validateLaps(laps: any[]): void {
@@ -39,14 +39,14 @@ export class InputValidatorService {
   private static createModelErrorMessage(
     type: string,
     index: number | null,
-    data: any,
+    data: any
   ): string {
     return index !== null
       ? `Model validation failed for ${type} at index ${index}: ${JSON.stringify(
-          data,
+          data
         )}. Ensure all required properties are present and valid.`
       : `Model validation failed for ${type}: ${JSON.stringify(
-          data,
+          data
         )}. Ensure all required properties are present and valid.`;
   }
 

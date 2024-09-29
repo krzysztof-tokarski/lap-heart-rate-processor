@@ -110,7 +110,8 @@
       "@/models": ["./src/models/index.ts"],
       "@/mappers": ["./src/mappers/index.ts"],
       "@/validators": ["./src/validators/index.ts"],
-      "@/constants": ["./src/constants/index.ts"]
+      "@/constants": ["./src/constants/index.ts"],
+      "@/services/*": ["./src/services/*"]
     }
   }
 }

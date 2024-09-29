@@ -1,7 +1,3 @@
-/**
- * @todo: adjust
- */
-
 import { InputModels } from '@/models';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

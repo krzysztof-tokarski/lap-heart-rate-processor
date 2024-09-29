@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import path from 'path';
+import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
   test: {
@@ -8,22 +8,26 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@/models',
-        replacement: path.resolve(__dirname, './src/models'),
+        find: "@/models",
+        replacement: path.resolve(__dirname, "./src/models"),
       },
       {
-        find: '@/mappers',
-        replacement: path.resolve(__dirname, './src/mappers'),
+        find: "@/mappers",
+        replacement: path.resolve(__dirname, "./src/mappers"),
       },
       {
-        find: '@/validators',
-        replacement: path.resolve(__dirname, './src/validators'),
+        find: "@/validators",
+        replacement: path.resolve(__dirname, "./src/validators"),
       },
       {
-        find: '@/constants',
-        replacement: path.resolve(__dirname, './src/constants'),
+        find: "@/constants",
+        replacement: path.resolve(__dirname, "./src/constants"),
+      },
+      {
+        find: "@/services",
+        replacement: path.resolve(__dirname, "./src/services"),
       },
     ],
   },
-  base: '/',
+  base: "/",
 });

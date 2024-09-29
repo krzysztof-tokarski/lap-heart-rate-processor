@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { LapHeartRateProcessor } from '../src/services/lap-heart-rate-processor';
+import { LapHeartRateProcessor } from '../src/lap-heart-rate-processor';
 import { LAPS_MOCK } from './mocks/input/lap.mock';
 import { SAMPLES_MOCK } from './mocks/input/sample.mock';
 import { SUMMARY_MOCK } from './mocks/input/summary.mock';
@@ -8,7 +8,9 @@ describe('LapHeartRateProcessor', () => {
   it('throws error if required inputs are not loaded', () => {
     const processor = new LapHeartRateProcessor();
 
-    expect(() => processor.process()).toThrowError('Not all required inputs provided');
+    expect(() => processor.process()).toThrowError(
+      'Not all required inputs provided'
+    );
   });
 
   it('processes data and returns ActivityOverview', () => {
