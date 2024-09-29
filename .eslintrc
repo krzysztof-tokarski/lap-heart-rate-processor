@@ -1,39 +1,39 @@
 {
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "prettier"],
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "env": {
-    "node": true
-  },
-  "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "singleQuote": true
-      }
-    ],
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      { "argsIgnorePattern": "^_" }
-    ],
-    "@typescript-eslint/explicit-function-return-type": "error",
-    "@typescript-eslint/explicit-member-accessibility": "error",
-    "@typescript-eslint/no-namespace": "off"
-  },
-  "overrides": [
-    {
-      "files": ["**/*.test.ts"],
-      "env": {
-        "node": true
-      }
-    }
-  ],
-  "ignorePatterns": ["dist/*"]
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "prettier"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended"
+	],
+	"env": {
+		"node": true
+	},
+	"rules": {
+		"prettier/prettier": [
+			"warn",
+			{
+				"singleQuote": true
+			}
+		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{ "argsIgnorePattern": "^_" }
+		],
+		"@typescript-eslint/explicit-function-return-type": "error",
+		"@typescript-eslint/explicit-member-accessibility": "error",
+		"@typescript-eslint/no-namespace": "off"
+	},
+	"overrides": [
+		{
+			"files": ["**/*.test.ts"],
+			"env": {
+				"node": true
+			}
+		}
+	],
+	"ignorePatterns": ["dist/*", "*.js"]
 }

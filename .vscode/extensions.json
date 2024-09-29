@@ -2,6 +2,7 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "rvest.vs-code-prettier-eslint",
-    "vitest.explorer"
+    "vitest.explorer",
+    "gruntfuggly.todo-tree"
   ]
 }
