@@ -1,7 +1,8 @@
-import { InputValidatorService } from './../../services/input-validator';
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+import { InputValidatorService } from '@/services/input-validator';
+import { InputValidators } from '@/validators';
 import { describe, expect, it, vi } from 'vitest';
-import { InputValidators } from './../../validators/index';
 
 vi.mock('@/validators', () => ({
   InputValidators: {

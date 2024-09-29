@@ -1,6 +1,6 @@
+import { InputModels } from '@/models';
+import { InputValidators } from '@/validators';
 import { describe, expect, it } from 'vitest';
-import { InputModels } from '../../../../models/index';
-import { InputValidators } from '../../../../validators';
 
 describe('isValidSample', () => {
   const validate = InputValidators.Model.isValidSample;
