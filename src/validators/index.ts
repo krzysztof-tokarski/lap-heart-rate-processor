@@ -1,19 +1,20 @@
-import isValidLaps from './input/business-logic/is-valid-laps';
-import isValidSamples from './input/business-logic/is-valid-samples';
-import isValidSummaryBL from './input/business-logic/is-valid-summary';
-import isValidLap from './input/model/is-valid-lap';
-import isValidSample from './input/model/is-valid-sample';
-import isValidSummary from './input/model/is-valid-summary';
+import isValidLap from './input/is-valid-lap';
+import isValidLaps from './input/is-valid-laps';
+import isValidSample from './input/is-valid-sample';
+import isValidSamples from './input/is-valid-samples';
+import isValidSummary from './input/is-valid-summary';
+import isValidNumberOfLaps from './intermediate/is-valid-number-of-laps';
+import isValidSamplesForIndoorCycling from './intermediate/is-valid-samples-for-indoor-cycling';
 
 export const InputValidators = {
-  Model: {
-    isValidLap,
-    isValidSample,
-    isValidSummary,
-  },
-  BusinessLogic: {
-    isValidLaps,
-    isValidSamples,
-    isValidSummary: isValidSummaryBL,
-  },
+  isValidLap,
+  isValidSample,
+  isValidSummary,
+  isValidLaps,
+  isValidSamples,
+};
+
+export const IntermediateValidators = {
+  isValidSamplesForIndoorCycling,
+  isValidNumberOfLaps,
 };

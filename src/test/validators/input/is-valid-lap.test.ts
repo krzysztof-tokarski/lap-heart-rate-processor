@@ -3,7 +3,7 @@ import { InputValidators } from '@/validators';
 import { describe, expect, it } from 'vitest';
 
 describe('isValidLap', () => {
-  const validate = InputValidators.Model.isValidLap;
+  const validate = InputValidators.isValidLap;
 
   it('should return true for a valid Lap object', () => {
     const validLap: InputModels.Lap = {

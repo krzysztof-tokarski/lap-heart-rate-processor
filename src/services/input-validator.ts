@@ -4,35 +4,32 @@ import { InputValidators } from '@/validators';
 export class InputValidatorService {
   public static validateLaps(laps: any[]): void {
     laps.forEach((lap, index) => {
-      if (!InputValidators.Model.isValidLap(lap)) {
+      if (!InputValidators.isValidLap(lap)) {
         throw new Error(this.createModelErrorMessage('lap', index, lap));
       }
     });
 
-    if (!InputValidators.BusinessLogic.isValidLaps(laps)) {
-      throw new Error(this.createBusinessLogicErrorMessage('laps'));
+    if (!InputValidators.isValidLaps(laps)) {
+      throw new Error(this.createModelErrorMessage('laps array', null, laps));
     }
   }
 
   public static validateSamples(samples: any[]): void {
     samples.forEach((sample, index) => {
-      if (!InputValidators.Model.isValidSample(sample)) {
+      if (!InputValidators.isValidSample(sample)) {
         throw new Error(this.createModelErrorMessage('sample', index, sample));
       }
     });
-
-    if (!InputValidators.BusinessLogic.isValidSamples(samples)) {
-      throw new Error(this.createBusinessLogicErrorMessage('samples'));
+    if (!InputValidators.isValidLaps(samples)) {
+      throw new Error(
+        this.createModelErrorMessage('samples array', null, samples)
+      );
     }
   }
 
   public static validateSummary(summary: any): void {
-    if (!InputValidators.Model.isValidSummary(summary)) {
+    if (!InputValidators.isValidSummary(summary)) {
       throw new Error(this.createModelErrorMessage('summary', null, summary));
-    }
-
-    if (!InputValidators.BusinessLogic.isValidSummary(summary)) {
-      throw new Error(this.createBusinessLogicErrorMessage('summary'));
     }
   }
 
@@ -48,9 +45,5 @@ export class InputValidatorService {
       : `Model validation failed for ${type}: ${JSON.stringify(
           data
         )}. Ensure all required properties are present and valid.`;
-  }
-
-  private static createBusinessLogicErrorMessage(type: string): string {
-    return `Business logic validation failed for ${type}. Check the overall data for integrity and business rules.`;
   }
 }

@@ -3,7 +3,7 @@ import { InputValidators } from '@/validators';
 import { describe, expect, it } from 'vitest';
 
 describe('isValidSummary', () => {
-  const validate = InputValidators.Model.isValidSummary;
+  const validate = InputValidators.isValidSummary;
 
   it('should return true for a valid Summary object', () => {
     const validSummary: InputModels.Summary = {

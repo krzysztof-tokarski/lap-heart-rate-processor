@@ -2,6 +2,7 @@ import { InputMappers } from '@/mappers';
 import { InputModels, IntermediateModels, OutputModels } from '@/models';
 import { HeartRateSampleService } from './services/heart-rate-sample';
 import { InputValidatorService } from './services/input-validator';
+import { IntermediateValidatorService } from './services/intermediate-validator';
 
 export class LapHeartRateProcessor {
   private _summary!: IntermediateModels.Summary;
@@ -26,6 +27,15 @@ export class LapHeartRateProcessor {
   public process(): OutputModels.ActivityOverview {
     if (!this._summary || !this._laps || !this._samples)
       throw new Error('Not all required inputs provided');
+
+    if (
+      !IntermediateValidatorService.validateLoadedData(
+        this._summary,
+        this._laps,
+        this._samples
+      )
+    )
+      throw new Error(`Data did not pass business logic validation rules`);
 
     const {
       userId,
