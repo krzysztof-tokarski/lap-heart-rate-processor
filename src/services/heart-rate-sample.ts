@@ -29,7 +29,7 @@ export class HeartRateSampleService {
 
         const indexesOfInputSamplesToTranslateIntoHeartRateSamplesForCurrentLap =
           activityType === CONSTANTS.LAP.INDOOR_CYCLING_ACTIVITY_TYPE_IDENTIFIER
-            ? [i, i++]
+            ? [i, ++i]
             : [i];
 
         heartRateSamplesByLapIndex[currentLapIndex] = [];
