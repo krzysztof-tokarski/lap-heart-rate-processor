@@ -3,7 +3,6 @@
     "dbaeumer.vscode-eslint",
     "rvest.vs-code-prettier-eslint",
     "vitest.explorer",
-    "gruntfuggly.todo-tree",
-    "kingwl.vscode-vitest-runner"
+    "gruntfuggly.todo-tree"
   ]
 }
